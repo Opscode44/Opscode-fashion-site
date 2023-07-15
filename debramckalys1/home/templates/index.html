@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Banner Starts Here -->
+  <div class="banner">    
+    <div class="flexslider" id="bigslider" style="position: absolute;">
+        <ul class="slides">
+          {% for image in banner_images %}
+            <li>
+              <!--<div style="background-image: url('{{ MEDIA_URL }}{{ image.image_url }}'); padding-top: 41%;"></div>-->
+              <img src="{{ MEDIA_URL }}{{ image.image_url }}">
+            </li>
+          {% endfor %}
+          <!-- items mirrored twice, total of 12 -->
+        </ul>
+    </div>   
+    <div class="container" style="z-index: 3; position: relative;">
+        <div class="row">
+          <div class="col-md-12">            
+            <div class="caption" style="margin-top: 80px;">
+              <h2>DebraMcKalys Collections</h2>
+              <div class="line-dec"></div>
+              <p>Discover Grace: Where Elegance Meets Comfort, Fashion that Embraces Your Individuality, Tailored to Perfection. 
+              <br><br>Please tell your friends about us and subscribe to how newsletter for new products and fashion trends info</p>
+              <div class="main-button">
+                <a href="{% url 'contact' %}">Order Now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+    <!-- Banner Ends Here -->
+
+    <!-- Featured Starts Here -->
+    <div class="featured-items">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1>Featured Items</h1>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+              {% for product in featured %}
+                <a href="{% url 'products' %}/{{product.id}}">
+                  <div class="featured-item">
+                    <img src="{{MEDIA_URL}}{{product.default_image.0.image_url}}" alt="{{product.name}}">
+                    <h4>{{product.name}}</h4>
+                    <h6>${{product.price}}</h6>
+                  </div>
+                </a>
+              {% endfor %}              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Featred Ends Here -->
+{% endblock %}
