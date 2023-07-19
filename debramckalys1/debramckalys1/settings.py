@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'debramckalys1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DATABASE_NAME', ''),
-        'USER': os.environ.get('DATABASE_USER', ''),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD', ''),
-        'HOST': os.environ.get('DATABASE_HOST', ''),
-        'PORT': os.environ.get('DATABASE_PORT', ''),
+        'NAME': 'debramckalys',
+        'USER': 'Dmck_Admin',
+        'PASSWORD': 'Quantumleap3.0',
+        'HOST': 'debramckalys-db-server.mysql.database.azure.com',
+        'PORT': '3306',
         'OPTIONS': {'ssl': True},
     }
 }
