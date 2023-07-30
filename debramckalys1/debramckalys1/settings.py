@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = False
 
 ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOSTNAME', ''), 'www.debramckalys,com', 'debramckalys.com']
-CSRF_TRUSTED_ORIGINS = [os.environ.get('WEBSITE_HOSTNAME', ''), 'www.debramckalys,com', 'debramckalys.com']
+CSRF_TRUSTED_ORIGINS = ['https://*.debramckalys.com']
 
 # Application definition
 
