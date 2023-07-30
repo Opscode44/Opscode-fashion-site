@@ -46,7 +46,6 @@ stages:
         pip install -r requirements.txt
         python manage.py makemigrations
         python manage.py migrate
-        python manage.py collectstatic
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
 
