@@ -175,7 +175,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Azure Blob Storage connection
 
-DEFAULT_FILE_STORAGE = 'core.azure_storage.AzureMediaStorage'
+DEFAULT_FILE_STORAGE = 'debramckalys1.azure_storage.AzureMediaStorage'
 AZURE_ACCOUNT_NAME = os.getenv('AZURE_ACCOUNT_NAME')
 AZURE_ACCOUNT_KEY = os.getenv('AZURE_ACCOUNT_KEY')
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
