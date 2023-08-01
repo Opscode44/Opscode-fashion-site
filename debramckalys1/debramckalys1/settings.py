@@ -33,7 +33,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'handlers': {
         'file': {
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'class': 'logging.FileHandler',
             'filename': 'debrasite_django.log',  # Change the filename as desired
         },
@@ -41,7 +41,7 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['file'],
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'propagate': True,
         },
     },
@@ -106,11 +106,11 @@ WSGI_APPLICATION = 'debramckalys1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'debramckalys',
-        'USER': 'Dmck_Admin',
-        'PASSWORD': 'Quantumleap3.0',
-        'HOST': 'debramckalys-db-server.mysql.database.azure.com',
-        'PORT': '3306',
+        'NAME': os.environ.get('DATABASE_NAME'),
+        'USER': os.environ.get('DATABASE_USER'),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+        'HOST': os.environ.get('DATABASE_HOST'),
+        'PORT': os.environ.get('DATABASE_PORT'),
         'OPTIONS': {'ssl': True},
     }
 }
