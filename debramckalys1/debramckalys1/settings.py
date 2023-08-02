@@ -114,7 +114,7 @@ DATABASES = {
         'OPTIONS': {'ssl': True},
     }
 }
-
+print(os.environ.get('DATABASE_NAME'), os.environ.get('DATABASE_USER'))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
