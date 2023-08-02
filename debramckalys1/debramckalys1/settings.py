@@ -106,18 +106,15 @@ WSGI_APPLICATION = 'debramckalys1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DATABASE_NAME', ''),
-        'USER': os.environ.get('DATABASE_USER', ''),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD', ''),
-        'HOST': os.environ.get('DATABASE_HOST', ''),
-        'PORT': os.environ.get('DATABASE_PORT', ''),
+        'NAME': os.environ.get('DATABASE_NAME'),
+        'USER': os.environ.get('DATABASE_USER'),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+        'HOST': os.environ.get('DATABASE_HOST'),
+        'PORT': os.environ.get('DATABASE_PORT'),
         'OPTIONS': {'ssl': True},
     }
 }
-print("This is the Database Username", os.environ.get('DATABASE_NAME', ''))
-print("This is the website hostname", os.environ.get('WEBSITE_HOSTNAME', ''))
-print("This is the secret key", os.environ.get('SECRET_KEY', ''))
-print("Another Test For Database Storage", os.getenv('debrastorage'))
+
 
 
 # Password validation
