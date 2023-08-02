@@ -115,6 +115,10 @@ DATABASES = {
     }
 }
 print("This is the Database Username", os.environ.get('DATABASE_NAME'))
+print("This is the wesite hostname", os.environ.get('WEBSITE_HOSTNAME'))
+print("This is the wesite hostname", os.environ.get('SECRET_KEY'))
+print("Another Test For Database Username", os.environ('DATABASE_NAME'))
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
