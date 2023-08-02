@@ -115,9 +115,9 @@ DATABASES = {
     }
 }
 print("This is the Database Username", os.environ.get('DATABASE_NAME', ''))
-print("This is the wesite hostname", os.environ.get('WEBSITE_HOSTNAME', ''))
-print("This is the secrest key", os.environ.get('SECRET_KEY', ''))
-print("Another Test For Database Username", os.getenv('DATABASE_NAME'))
+print("This is the website hostname", os.environ.get('WEBSITE_HOSTNAME', ''))
+print("This is the secret key", os.environ.get('SECRET_KEY', ''))
+print("Another Test For Database Storage", os.getenv('debrastorage'))
 
 
 # Password validation
